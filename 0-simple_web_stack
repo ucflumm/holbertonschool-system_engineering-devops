@@ -1,0 +1,25 @@
+Additional Explanations:
+A server is generally located in a data center:
+	Typically, servers are housed in data centers designed to provide security, cooling, power, and 	networking for these systems.
+
+A server can be physical or virtual:
+	Servers can be physical machines or virtual instances running on a larger physical server.
+	Virtualization allows multiple virtual servers to run on a single physical machine.
+
+A server runs an OS:
+	The server operates using an operating system (such as Linux, Windows, etc.) that manages 
+	hardware resources and provides an environment for running software applications.
+
+Web server’s role is to serve web pages (static content):
+	Nginx, in this setup, serves static web content like HTML files, images, CSS, and JavaScript to
+	users' web browsers.
+
+Application server’s role is to compute dynamic content:
+	The application server processes requests, executes the codebase, and generates dynamic content 	based on user interactions. It communicates with the database to fetch and manipulate data.
+
+www.foobar.com is an A record because it resolves to an IP address:
+	The DNS "A" record associates a domain name (www.foobar.com) with an IP address (8.8.8.8).
+
+The website would be temporarily down when new code is deployed and the web server needs to be r	estarted:
+	When new code is deployed, the web server needs to be restarted, causing a temporary period of website unavailability or downtime during the restart process.
+
