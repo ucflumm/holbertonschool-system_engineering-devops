@@ -1,0 +1,40 @@
+Explanation of Components:
+1. Adding Load Balancer (HAProxy):
+	The load balancer distributes incoming web traffic among multiple servers to enhance performance, ensure high availability, 
+	and prevent a single point of failure (SPOF).
+
+2. Adding Multiple Application Servers:
+	Multiple application servers enable load distribution and redundancy, ensuring that if one server fails, the others can 
+	still handle incoming requests.
+
+3. Database Primary-Replica (Master-Slave) Cluster:
+	The primary-replica setup in the database involves a master node (primary) and one or more replica nodes (slaves). 
+	The primary node handles write operations, while replica nodes replicate data from the primary for read operations, 
+	ensuring data redundancy and fault tolerance.
+
+4. Explanation of Load Balancer Configuration:
+	The load balancer is configured with a round-robin distribution algorithm, which evenly distributes incoming requests among 
+	the application servers in a cyclic manner. This helps in load distribution without taking server load into account.
+
+5. Active-Active vs. Active-Passive Setup:
+	The setup with multiple active application servers (all serving traffic simultaneously) is an Active-Active configuration. 
+	Active-Passive involves one active server handling traffic while the others remain in standby until the active server fails.
+
+6. Difference Between Primary and Replica in Database:
+	The primary node handles write operations (insert, update, delete) on the database, while replica nodes replicate data 
+	from the primary and handle read operations. Replicas can take over if the primary fails.
+
+### Issues with this Infrastructure:
+1. Single Points of Failure (SPOFs):
+	Despite the use of multiple servers, there might still be SPOFs in the load balancer, database, or servers due to 
+	misconfigurations or hardware failures.
+
+2. Security Issues (No Firewall, No HTTPS):
+	Lack of a dedicated firewall and absence of HTTPS can expose the infrastructure to potential security threats, 
+	including unauthorized access, data breaches, and interception of sensitive information.
+
+3. No Monitoring:
+	Absence of monitoring systems makes it difficult to track performance, detect issues, and respond to potential failures
+	or security breaches promptly.
+
+Improvements to this infrastructure might involve implementing redundancy in critical components, adding a firewall for security, incorporating HTTPS encryption, and introducing monitoring systems for performance and security monitoring.
